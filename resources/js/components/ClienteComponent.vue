@@ -11,7 +11,7 @@
 					<td>{{cliente.name}}</td>
 				</tr>
 			  </table>
-			<cliente-component v-if="altacliente"></cliente-component>
+			<cliente-formulario-component v-if="altacliente" @click="cliente=cliente"></cliente-formulario-component>
 		</div>
 </template>
 <script>
@@ -33,9 +33,14 @@
 			mostrarCliente:function(){
 				axios.get('cliente').then(respose =>{
 					this.clientes = respose.data
-				})
+				});
 			}
-		}	
+		
+			
+
+
+		},	
+
 
 	}
 </script>
