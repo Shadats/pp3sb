@@ -11,7 +11,7 @@
 					<td>{{cliente.name}}</td>
 				</tr>
 			  </table>
-			<cliente-formulario-component v-if="altacliente" @click="cliente=cliente"></cliente-formulario-component>
+			<cliente-formulario-component v-if="altacliente" @click= "cliente=cliente"></cliente-formulario-component>
 		</div>
 </template>
 <script>
@@ -26,7 +26,7 @@
 
 		mounted(){
 			this.mostrarCliente();
-			console.log('Component mounted.');
+			console.log('Cliente Component mounted.');
 		},
 
 		methods:{
